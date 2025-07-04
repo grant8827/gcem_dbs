@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,20 @@ CSEF_TRUSTED_ORIGINS = ["https://gcemdbs.up.railway.app/"]
 SECRET_KEY = "django-insecure-%w7^pl$f%ia947--i#$#kmkv7zwpl%_x_08drv6y&q%j)6z4w)"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# church_finance_project/settings.py
 
-ALLOWED_HOSTS = ["*"]
+# ... other settings ...
+
+# Set DEBUG based on environment variable (Crucial for production)
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
+
+# IMPORTANT: Add your Railway domain(s) here
+# Replace 'your-app-name.up.railway.app' with the actual domain from Railway
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://gcemdbs.up.railway.app/']
+# If you have a custom domain (e.g., www.your-church.com), add it too:
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'your-app-name.up.railway.app', 'www.your-church.com', 'your-church.com']
+
+# ... rest of your settings ...
 
 
 # Application definition
