@@ -23,9 +23,9 @@ CSEF_TRUSTED_ORIGINS = ["https://gcemdbs.up.railway.app/"]
 SECRET_KEY = "django-insecure-%w7^pl$f%ia947--i#$#kmkv7zwpl%_x_08drv6y&q%j)6z4w)"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
