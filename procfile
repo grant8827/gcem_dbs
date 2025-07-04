@@ -1,0 +1,2 @@
+web: gunicorn church_finance_project.wsgi --log-file
+web: python manage.py migrate && gunicorn church_finance_project.wsgi 
