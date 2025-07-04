@@ -15,7 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSEF_TRUSTED_ORIGINS = ["gcemdbs.up.railway.app"]
+CSEF_TRUSTED_ORIGINS = ["https://gcemdbs.up.railway.app/"]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-%w7^pl$f%ia947--i#$#kmkv7zwpl%_x_08drv6y&q%j)6z4w)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["gcemdbs.up.railway.app", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
